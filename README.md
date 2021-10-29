@@ -7,11 +7,11 @@
 
 周期:= BARSLAST(REF(涨停,1))+1;
 
-HH:=C<REF(C, 周期)*1.06;
+HH:=C<REF(C, 周期)*1.15;
 
 LL:=C>REF(O, 周期)*0.9;
 
-强势:=LLV(C,周期-1)>REF(O,周期);
+强势:=LLV(C,周期-1)>REF(O,周期)*0.9;
 
 中间:=HH AND LL AND 强势;
 
